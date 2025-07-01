@@ -1,105 +1,93 @@
-        :root {
-            --cor-destaque: #6A5ACD;
-            --cor-destaque-secundaria: #111010;
-            --cor-texto: #E6E6FA;
-            --cor-fundo: linear-gradient(135deg, #0A0A1A 0%, #1A1A2E 50%, #2A2A3A 100%);
-            --cor-borda: #483D8B;
-            --cor-placeholder: #9370DB;
-        }
+@import url('https://fonts.googleapis.com/css2?family=Kapakana:wght@300..400&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 
-        * {
-            margin: 0;
-            padding: 0;
-            font-family: 'Cormorant Garamond', serif;
-            box-sizing: border-box;
-        }
+:root { 
+  --cor-destaque: #a21a97; 
+  --cor-gradiente-preto: linear-gradient( 
+    113deg, 
+    #000 0%, 
+    #1e2021 44.96%, 
+    #1e2022 100% 
+  ); 
+} 
 
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 16px 21px 18px 21px;
-            background: var(--cor-fundo);
-            height: 100vh;
-            flex-direction: column;
-            color: var(--cor-texto);
-        }
+* { 
+  margin: 0; 
+  padding: 0; 
+  font-family: "Quintessential", serif;
+  font-weight: 400;
+  font-style: normal;
+} 
 
-        .container {
-            display: flex;
-            width: 65rem;
-            flex-direction: column;
-            align-items: center;
-            gap: 3rem;
-            overflow: hidden;
-            border: 1px solid var(--cor-borda);
-            border-radius: 8px;
-            padding: 2rem;
-            background: rgba(10, 10, 26, 0.7);
-            box-shadow: 0 0 20px rgba(106, 90, 205, 0.3);
-        }
+body { 
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  padding: 16px 21px 18px 21px; 
+  background: var(--cor-gradiente-preto); 
+  height: 100vh; 
+  flex-direction: column; 
+} 
 
-        h1 {
-            color: var(--cor-destaque);
-            text-align: center;
-            font-size: 2.8rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            font-family: 'Cinzel', serif;
-            letter-spacing: 2px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-            border-bottom: 2px solid var(--cor-destaque-secundaria);
-            padding-bottom: 0.5rem;
-        }
+.container { 
+  display: flex; 
+  width: 65rem; 
+  flex-direction: column; 
+  align-items: center; 
+  gap: 3rem; 
+  overflow: hidden; 
+} 
 
-        #entrada-de-texto {
-            display: flex;
-            height: 12rem;
-            padding: 1.4rem 2.5rem 2.5rem 2.5rem;
-            align-items: flex-start;
-            gap: 0.625rem;
-            align-self: stretch;
-            border-radius: 0.625rem;
-            background: rgba(26, 26, 46, 0.8);
-            font-size: 1.8rem;
-            border: 1px solid var(--cor-borda);
-            resize: none;
-            color: var(--cor-texto);
-            font-family: 'Cormorant Garamond', serif;
-        }
+h1 { 
+  color: var(--cor-destaque); 
+  text-align: center; 
+  font-size: 2.8rem; 
+  font-weight: 600; 
+  text-transform: uppercase; 
+} 
 
-        #entrada-de-texto::placeholder {
-            color: var(--cor-placeholder);
-            font-size: 1.8rem;
-            font-weight: 400;
-            font-style: italic;
-            opacity: 0.7;
-        }
+#entrada-de-texto { 
+  display: flex; 
+  height: 12rem; 
+  padding: 1.4rem 2.5rem 2.5rem 2.5rem; 
+  align-items: flex-start; 
+  gap: 0.625rem; 
+  align-self: stretch; 
+  border-radius: 0.625rem; 
+  background: #fff; 
+  font-size: 2rem; 
+} 
 
-        #botao-palavrachave {
-            display: flex;
-            padding: 1.25rem 2.5rem;
-            justify-content: center;
-            align-items: center;
-            gap: 0.625rem;
-            border-radius: 0.5rem;
-            border: none;
-            background: var(--cor-destaque);
-            color: #FFF;
-            font-size: 2rem;
-            font-weight: 600;
-            line-height: normal;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            font-family: 'Cinzel', serif;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            position: relative;
-            overflow: hidden;
-        }
+#entrada-de-texto::placeholder { 
+  color: #828282; 
+  font-size: 2rem; 
+  font-weight: 400; 
+  line-height: normal; 
+} 
 
-        #botao-palavrachave:hover {
-            background: var(--cor-destaque-secundaria);
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(178, 34, 34, 0.4);
-        }
+#botao-palavrachave { 
+  display: flex; 
+  padding: 1.25rem; 
+  justify-content: center; 
+  align-items: center; 
+  gap: 0.625rem; 
+  border-radius: 0.5rem; 
+  border: none; 
+  background: var(--cor-destaque); 
+  color: #000; 
+  font-size: 2.5rem; 
+  font-weight: 500; 
+  line-height: normal; 
+} 
+
+#resultado-palavrachave { 
+  display: flex; 
+  border-radius: 0.625rem; 
+  align-self: stretch; 
+  color: var(--cor-destaque); 
+  font-size: 2.5rem; 
+  justify-content: center; 
+  margin-bottom: 2rem; 
+  max-width: 100%; 
+  max-height: 50vh; 
+  overflow: auto; 
+} 
